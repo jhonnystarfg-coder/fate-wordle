@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate Grand Wordle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">⚔️ Fate Grand Wordle ⚔️</h1>
+            <p class="subtitle">Adivina el personaje del Nasuverse</p>
+            <div id="previous-day" class="previous-day hidden"></div>
+        </div>
+
+        <div class="input-section">
+            <div class="input-container">
+                <input id="guess-input" type="text" placeholder="Busca un personaje..." autocomplete="off">
+                <div id="autocomplete" class="autocomplete"></div>
+            </div>
+            <div class="btn-container">
+                <button id="guess-btn">🎯 Adivinar</button>
+            </div>
+        </div>
+
+        <div id="hints" class="hints-section">
+            <button id="hint1" class="hint-btn hidden">💡 Pista 1 (Categoría)</button>
+            <button id="hint2" class="hint-btn hidden">💡 Pista 2 (Clase)</button>
+        </div>
+
+        <div class="grid">
+            <div class="grid-header">
+                <div class="grid-header-cell">Personaje</div>
+                <div class="grid-header-cell">Clase</div>
+                <div class="grid-header-cell">Género</div>
+                <div class="grid-header-cell">Cabello</div>
+                <div class="grid-header-cell">NP Type</div>
+                <div class="grid-header-cell">Nación</div>
+            </div>
+            <div id="grid"></div>
+        </div>
+
+        <div id="win-message" class="win-message hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
