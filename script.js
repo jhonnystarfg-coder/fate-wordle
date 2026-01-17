@@ -1,83 +1,78 @@
-// Base de datos de personajes (puedes agregar más)
 const servants = [
-    { name: "Artoria Pendragon", class: "Saber", gender: "Femenino", hair: "Rubio", np: "Anti-Fortress", nation: "Britania", category: "Servant" },
-    { name: "Jeanne d'Arc", class: "Ruler", gender: "Femenino", hair: "Rubio", np: "Anti-Army", nation: "Francia", category: "Servant" },
-    { name: "Gilgamesh", class: "Archer", gender: "Masculino", hair: "Rubio", np: "Anti-World", nation: "Sumeria", category: "Servant" },
-    { name: "Cu Chulainn", class: "Lancer", gender: "Masculino", hair: "Azul", np: "Anti-Unit", nation: "Irlanda", category: "Servant" },
-    { name: "Medusa", class: "Rider", gender: "Femenino", hair: "Morado", np: "Anti-Army", nation: "Grecia", category: "Servant" },
-    { name: "Medea", class: "Caster", gender: "Femenino", hair: "Morado", np: "Anti-Unit", nation: "Grecia", category: "Servant" },
-    { name: "Sasaki Kojirou", class: "Assassin", gender: "Masculino", hair: "Azul", np: "Anti-Unit", nation: "Japón", category: "Servant" },
-    { name: "Heracles", class: "Berserker", gender: "Masculino", hair: "Negro", np: "Anti-Unit", nation: "Grecia", category: "Servant" },
-    { name: "Emiya", class: "Archer", gender: "Masculino", hair: "Blanco", np: "Anti-Unit", nation: "Japón", category: "Servant" },
-    { name: "Ishtar", class: "Archer", gender: "Femenino", hair: "Negro", np: "Anti-Mountain", nation: "Sumeria", category: "Servant" },
-    { name: "Scathach", class: "Lancer", gender: "Femenino", hair: "Morado", np: "Anti-Unit", nation: "Irlanda", category: "Servant" },
-    { name: "Mordred", class: "Saber", gender: "Femenino", hair: "Rubio", np: "Anti-Army", nation: "Britania", category: "Servant" },
-    { name: "Jack the Ripper", class: "Assassin", gender: "Femenino", hair: "Plateado", np: "Anti-Unit", nation: "Inglaterra", category: "Servant" },
-    { name: "Karna", class: "Lancer", gender: "Masculino", hair: "Blanco", np: "Anti-Country", nation: "India", category: "Servant" },
-    { name: "Arjuna", class: "Archer", gender: "Masculino", hair: "Blanco", np: "Anti-Army", nation: "India", category: "Servant" },
-    { name: "ORT", class: "N/A", gender: "N/A", hair: "N/A", np: "N/A", nation: "Desconocido", category: "Foreign Entity" },
-    { name: "Merlin", class: "Caster", gender: "Masculino", hair: "Blanco", np: "Anti-Unit", nation: "Britania", category: "Servant" },
-    { name: "Okita Souji", class: "Saber", gender: "Femenino", hair: "Castaño", np: "Anti-Unit", nation: "Japón", category: "Servant" },
-    { name: "Nero Claudius", class: "Saber", gender: "Femenino", hair: "Rubio", np: "Anti-Team", nation: "Roma", category: "Servant" },
-    { name: "Tamamo no Mae", class: "Caster", gender: "Femenino", hair: "Rosa", np: "Anti-Army", nation: "Japón", category: "Servant" },
-    { name: "Iskandar", class: "Rider", gender: "Masculino", hair: "Rojo", np: "Anti-Army", nation: "Macedonia", category: "Servant" },
-    { name: "Ozymandias", class: "Rider", gender: "Masculino", hair: "Rubio", np: "Anti-Fortress", nation: "Egipto", category: "Servant" },
-    { name: "Enkidu", class: "Lancer", gender: "N/A", hair: "Verde", np: "Anti-Purge", nation: "Sumeria", category: "Servant" },
-    { name: "Mysterious Heroine X", class: "Assassin", gender: "Femenino", hair: "Rubio", np: "Anti-Unit", nation: "Desconocido", category: "Servant" },
-    { name: "Musashi Miyamoto", class: "Saber", gender: "Femenino", hair: "Negro", np: "Anti-Unit", nation: "Japón", category: "Servant" }
+    { name: "Artoria Pendragon", class: "Saber", gender: "Femenino", hair: "Rubio", np: "Anti-Fortress", nation: "Britania", category: "Servant", image: "images/artoria.png" },
+    { name: "Gilgamesh", class: "Archer", gender: "Masculino", hair: "Rubio", np: "Anti-World", nation: "Sumeria", category: "Servant", image: "images/gilgamesh.png" },
+    { name: "Cu Chulainn", class: "Lancer", gender: "Masculino", hair: "Azul", np: "Anti-Unit", nation: "Irlanda", category: "Servant", image: "images/cu.png" },
+    { name: "Emiya", class: "Archer", gender: "Masculino", hair: "Blanco", np: "Anti-Unit", nation: "Japón", category: "Servant", image: "images/emiya.png" },
+    { name: "Jeanne d'Arc", class: "Ruler", gender: "Femenino", hair: "Rubio", np: "Anti-Army", nation: "Francia", category: "Servant", image: "images/jeanne.png" },
+    { name: "Scathach", class: "Lancer", gender: "Femenino", hair: "Morado", np: "Anti-Unit", nation: "Irlanda", category: "Servant", image: "images/scathach.png" },
+    { name: "Ishtar", class: "Archer", gender: "Femenino", hair: "Negro", np: "Anti-Mountain", nation: "Sumeria", category: "Servant", image: "images/ishtar.png" },
+    { name: "Merlin", class: "Caster", gender: "Masculino", hair: "Blanco", np: "Anti-Unit", nation: "Britania", category: "Servant", image: "images/merlin.png" },
+    { name: "Heracles", class: "Berserker", gender: "Masculino", hair: "Negro", np: "Anti-Unit", nation: "Grecia", category: "Servant", image: "images/heracles.png" },
+    { name: "Mordred", class: "Saber", gender: "Femenino", hair: "Rubio", np: "Anti-Army", nation: "Britania", category: "Servant", image: "images/mordred.png" }
 ];
+servants.sort((a, b) => a.name.localeCompare(b.name));
 
 let answer = null;
 let attempts = 0;
 let gameState = { day: null, answer: null, attempts: [], won: false };
-
-// Elementos del DOM
 const input = document.getElementById('guess-input');
 const autocompleteDiv = document.getElementById('autocomplete');
 const guessBtn = document.getElementById('guess-btn');
 const gridDiv = document.getElementById('grid');
 const winMessage = document.getElementById('win-message');
-
-// Sistema de autocompletado
-input.addEventListener('input', () => {
-    const value = input.value.toLowerCase();
+function showAutocomplete(filter = '') {
     autocompleteDiv.innerHTML = '';
     
-    if (value.length < 2) {
-        autocompleteDiv.style.display = 'none';
-        return;
-    }
-
-    const matches = servants.filter(s => 
-        s.name.toLowerCase().includes(value)
-    ).slice(0, 5);
-
+    const filterLower = filter.toLowerCase().trim();
+    const usedNames = gameState.attempts.map(s => s.name);
+    let availableServants = servants.filter(s => !usedNames.includes(s.name));
+    
+    const matches = filterLower.length === 0 
+        ? availableServants 
+        : availableServants.filter(s => s.name.toLowerCase().includes(filterLower));
+    
     if (matches.length > 0) {
         autocompleteDiv.style.display = 'block';
+        
         matches.forEach(servant => {
             const div = document.createElement('div');
             div.className = 'autocomplete-item';
-            div.textContent = servant.name;
+            const img = document.createElement('img');
+            img.src = servant.image;
+            img.alt = servant.name;
+            img.onerror = function() {
+                this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40"%3E%3Crect fill="%233d4a6b" width="40" height="40"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20"%3E?%3C/text%3E%3C/svg%3E';
+            };
+            const span = document.createElement('span');
+            span.textContent = servant.name;
+            
+            div.appendChild(img);
+            div.appendChild(span);
+            
             div.onclick = () => {
                 input.value = servant.name;
                 autocompleteDiv.style.display = 'none';
                 input.focus();
             };
+            
             autocompleteDiv.appendChild(div);
         });
     } else {
         autocompleteDiv.style.display = 'none';
     }
+}
+input.addEventListener('focus', () => {
+    showAutocomplete(input.value);
 });
 
-// Cerrar autocomplete al hacer click fuera
+input.addEventListener('input', () => {
+    showAutocomplete(input.value);
+});
 document.addEventListener('click', (e) => {
-    if (e.target !== input) {
+    if (e.target !== input && !autocompleteDiv.contains(e.target)) {
         autocompleteDiv.style.display = 'none';
     }
 });
-
-// Guardar y cargar estado del juego
 function saveState() {
     try {
         localStorage.setItem("fgw-state", JSON.stringify(gameState));
@@ -94,19 +89,14 @@ function loadState() {
         return null;
     }
 }
-
-// Cargar personaje diario
 function loadDaily() {
     const today = new Date().toDateString();
     const saved = loadState();
 
     if (saved && saved.day === today) {
-        // Restaurar partida del día
         gameState = saved;
         answer = gameState.answer;
         attempts = gameState.attempts.length;
-        
-        // Restaurar intentos previos
         gameState.attempts.forEach(servant => createRow(servant));
         checkHints();
         
@@ -114,7 +104,6 @@ function loadDaily() {
             showWin();
         }
     } else {
-        // Mostrar personaje del día anterior
         if (saved && saved.answer) {
             const prevDay = document.getElementById("previous-day");
             prevDay.textContent = `📅 El personaje de ayer fue: ${saved.answer.name}`;
@@ -132,8 +121,6 @@ function loadDaily() {
         saveState();
     }
 }
-
-// Procesar intento del jugador
 function checkGuess() {
     if (gameState.won) {
         alert("¡Ya ganaste! Vuelve mañana para un nuevo personaje 🎉");
@@ -150,13 +137,12 @@ function checkGuess() {
     const servant = servants.find(s => s.name.toLowerCase() === guess.toLowerCase());
 
     if (!servant) {
-        alert("❌ Personaje no encontrado. Verifica el nombre.");
+        alert("❌ Personaje no encontrado. Verifica el nombre o selecciónalo de la lista.");
         return;
     }
-
-    // Evitar intentos duplicados
     if (gameState.attempts.some(s => s.name === servant.name)) {
         alert("Ya intentaste con este personaje");
+        input.value = "";
         return;
     }
 
@@ -167,8 +153,6 @@ function checkGuess() {
     
     input.value = "";
     autocompleteDiv.style.display = 'none';
-
-    // Verificar si ganó
     if (servant.name === answer.name) {
         gameState.won = true;
         showWin();
@@ -176,23 +160,46 @@ function checkGuess() {
 
     saveState();
 }
-
-// Crear fila visual con el intento
 function createRow(servant) {
     const row = document.createElement("div");
     row.classList.add("row");
 
-    const fields = ["name", "class", "gender", "hair", "np", "nation"];
+    const fields = [
+        { key: "name", isName: true },
+        { key: "class", isName: false },
+        { key: "gender", isName: false },
+        { key: "hair", isName: false },
+        { key: "np", isName: false },
+        { key: "nation", isName: false }
+    ];
 
-    fields.forEach(f => {
+    fields.forEach(field => {
         const cell = document.createElement("div");
         cell.classList.add("cell");
-        cell.textContent = servant[f] || "N/A";
+        
+        if (field.isName) {
+            cell.classList.add("name-cell");
+            const img = document.createElement('img');
+            img.src = servant.image;
+            img.alt = servant.name;
+            img.onerror = function() {
+                this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40"%3E%3Crect fill="%233d4a6b" width="40" height="40"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20"%3E?%3C/text%3E%3C/svg%3E';
+            };
+            
+            const nameSpan = document.createElement('span');
+            nameSpan.textContent = servant.name;
+            nameSpan.style.fontSize = '13px';
+            nameSpan.style.fontWeight = '600';
+            
+            cell.appendChild(img);
+            cell.appendChild(nameSpan);
+        } else {
+            cell.textContent = servant[field.key] || "N/A";
+        }
 
-        // Comparar con la respuesta correcta
-        if (servant[f] === answer[f]) {
+        if (servant[field.key] === answer[field.key]) {
             cell.classList.add("correct");
-        } else if (Array.isArray(answer[f]) && answer[f].includes(servant[f])) {
+        } else if (Array.isArray(answer[field.key]) && answer[field.key].includes(servant[field.key])) {
             cell.classList.add("partial");
         } else {
             cell.classList.add("wrong");
@@ -204,7 +211,6 @@ function createRow(servant) {
     gridDiv.appendChild(row);
 }
 
-// Sistema de pistas progresivas
 function checkHints() {
     if (attempts >= 4) {
         const h1 = document.getElementById("hint1");
@@ -219,7 +225,6 @@ function checkHints() {
     }
 }
 
-// Mostrar mensaje de victoria
 function showWin() {
     winMessage.classList.remove("hidden");
     winMessage.innerHTML = `
@@ -234,13 +239,9 @@ function showWin() {
         <button class="share-btn" onclick="shareResults()">📋 Compartir Resultado</button>
         <div style="margin-top: 15px; font-size: 16px;">Vuelve mañana para un nuevo personaje ⚔️</div>
     `;
-    
-    // Deshabilitar controles
     input.disabled = true;
     guessBtn.disabled = true;
 }
-
-// Compartir resultados (estilo Wordle)
 function shareResults() {
     const squares = gameState.attempts.map(attempt => {
         const fields = ["name", "class", "gender", "hair", "np", "nation"];
@@ -255,7 +256,7 @@ function shareResults() {
     
     if (navigator.clipboard) {
         navigator.clipboard.writeText(text).then(() => {
-            alert("¡Resultado copiado al portapapeles! 📋 Ahora puedes compartirlo.");
+            alert("¡Resultado copiado al portapapeles! 📋");
         }).catch(() => {
             prompt("Copia este texto para compartir:", text);
         });
@@ -264,15 +265,12 @@ function shareResults() {
     }
 }
 
-// Permitir usar Enter para adivinar
 input.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
         checkGuess();
     }
 });
 
-// Event listener del botón
 guessBtn.onclick = checkGuess;
 
-// Iniciar el juego
 loadDaily();
