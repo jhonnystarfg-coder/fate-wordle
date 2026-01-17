@@ -180,7 +180,7 @@ function createRow(servant) {
         if (field.isName) {
             cell.classList.add("name-cell");
             const img = document.createElement('img');
-            img.src = servant.image;
+            img.src = './' + servant.image;
             img.alt = servant.name;
             img.onerror = function() {
                 this.src = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="40" height="40"%3E%3Crect fill="%233d4a6b" width="40" height="40"/%3E%3Ctext x="50%25" y="50%25" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="20"%3E?%3C/text%3E%3C/svg%3E';
@@ -274,4 +274,5 @@ input.addEventListener("keypress", (e) => {
 guessBtn.onclick = checkGuess;
 
 loadDaily();
+
 
